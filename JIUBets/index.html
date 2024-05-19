@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,15 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pedro Henrique de Almeida">
     <link rel="stylesheet" href="index.css"> <!-- Comunicação com CSS index.css -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
     <title>JIUBets</title> <!-- Titulo da pagina-->
 </head>
 
 <body> <!-- Inicio corpo -->
-    <header> <!-- Inicio Cabeçalho -->
-        <img src="img/LAU_Logo_Circulo_Basquete.png" alt="logo_lau" id="logo_lau"> <!-- Logo LAU -->
-        <h1>JIU Bets</h1> <!-- Titulo do Site-->
+    <header> <!-- Início Cabeçalho -->
+        <div class="logo-container">
+            <img src="img/LAU_Logo_Circulo_Basquete.png" alt="logo_lau" id="logo_lau"> <!-- Logo LAU -->
+            <h1>JIU Bets</h1> <!-- Título do Site-->
+        </div>
         <nav> <!-- Links para navegação-->
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="signup.html">Inscrição</a></li>
                 <li><a href="resultados.html">Resultados</a></li>
@@ -31,85 +38,168 @@
 
     <section id="results"> <!-- Inicio sessão results-->
         <h2>Jogos da Semana</h2>
-        <table class="versus_table"> <!-- Inicio sessão versus_table-->
-            <thead> <!-- Inicio Titulo da tabela -->
-                <h3>FUTSAL MASCULINO</h3>
-                <tr>
-                    <th class="team_shields"><img src="img/logo_bcc.png" alt="logo_bcc" id="logo_bcc"></th>
-                    <!-- Logo BCC -->
-                    <th class="x_versus_table">X</th>
-                    <th class="team_shields"><img src="img/logo_fisioterapia.png" alt="logo_fisioterapia"
-                            id="logo_fisio"></th> <!-- Logo Fisio -->
-                </tr>
-            </thead> <!-- Fim Titulo da tabela -->
-            <tbody> <!-- Inicio corpo da tabela-->
-                <tr> <!-- Dados da tabela -->
-                    <td>BCC</td>
-                    <td>15/05 - 20:00</td>
-                    <td>Fisio</td>
-                </tr> <!-- Fim dados da tabela -->
-        </table> <!-- Fim tabela versus_table -->
+        <div id="mens_futsal"> <!-- Inicio div mens_futsal-->
+            <table class="versus_table"> <!-- Inicio sessão versus_table-->
+                <thead> <!-- Inicio Titulo da tabela -->
+                    <h3>FUTSAL MASCULINO</h3>
+                    <tr>
+                        <th class="team_shields"><img src="img/logo_bcc.png" alt="logo_bcc" id="logo_bcc"></th> <!-- Logo BCC -->
+                        <th class="x_versus_table">X</th>
+                        <th class="team_shields"><img src="img/logo_fisioterapia.png" alt="logo_fisioterapia" id="logo_fisio"></th> <!-- Logo Fisio -->
+                    </tr>
+                </thead> <!-- Fim Titulo da tabela -->
+                <tbody> <!-- Inicio corpo da tabela-->
+                    <tr> <!-- Dados da tabela -->
+                        <td>BCC</td>
+                        <td>15/05 - 20:00</td>
+                        <td>Fisio</td>
+                    </tr> <!-- Fim dados da tabela -->
+            </table> <!-- Fim tabela versus_table -->
 
-        <div class="general_odds"> <!-- Inicio odds gerais -->
-            <div class="container"> <!-- Inicio classe container -->
-                <table class="odd_match_result"> <!-- Inicio tabela odd_match_result -->
-                    <thead> <!-- Inicio Titulo da tabela -->
-                        <tr>
-                            <th>Resultado da partida</th>
-                        </tr>
-                    </thead> <!-- Fim titulo da tabela -->
-                    <tbody> <!-- Inicio corpo da tabela -->
-                        <tr> <!-- Dados da tabela -->
-                            <td><button class="bet-button" id="bet-bcc">BCC - 1.75</button></td>
-                        </tr>
-                        <tr>
-                            <td><button class="bet-button" id="bet-draw">Empate - 3.00</button></td>
-                        </tr>
-                        <tr>
-                            <td><button class="bet-button" id="bet-fisio">Fisio - 2.50</button></td>
-                        </tr>
-                    </tbody> <!-- Fim corpo da tabela -->
-                </table> <!-- Fim tabela odd_match_result -->
-                <table class="odd_number_goals"> <!-- Inicio tabela odd_number_goals -->
-                    <thead> <!-- Inicio titulo da tabela -->
-                        <tr> <!-- dados da tabela -->
-                            <th colspan="3">Total de Gols: Mais/Menos</th>
-                        </tr>
-                        <th></th>
-                        <th>Mais</th>
-                        <th>Menos</th>
-                    </thead> <!-- Fim dados da tabela -->
-                    <tbody> <!-- Inicio corpo da tabela -->
-                        <tr> <!-- Dados da tabela -->
-                            <td>0,5</td>
-                            <td><button>1.10 </button></td>
-                            <td><button>4.00</button></td>
-                        </tr>
-                        <tr>
-                            <td>1,5</td>
-                            <td><button>1.25</button></td>
-                            <td><button>3.65</button></td>
-                        </tr>
-                        <tr>
-                            <td>2,5</td>
-                            <td><button>1.45 </button></td>
-                            <td><button>2.90</button></td>
-                        </tr>
-                        <tr>
-                            <td>3,5</td>
-                            <td><button>1.60 </button></td>
-                            <td><button>2.55</button></td>
-                        </tr>
-                    </tbody> <!-- Fim corpo da tabela -->
-                </table> <!-- Fim tabela odd_number_goals-->
-            </div> <!-- Fim classe container -->
-        </div> <!-- Fim classe general_odds -->
-        </tbody>
+            <div class="general_odds"> <!-- Inicio odds gerais -->
+                <div class="container"> <!-- Inicio classe container -->
+                    <table class="odd_winner_result"> <!-- Inicio tabela odd_winner_result -->
+                        <thead> <!-- Inicio Titulo da tabela -->
+                            <tr>
+                                <th colspan="2">Vencedor da partida</th>
+                            </tr>
+                        </thead> <!-- Fim titulo da tabela -->
+                        <tbody> <!-- Inicio corpo da tabela -->
+                            <tr> <!-- Dados da tabela -->
+                                <th>BCC</th>
+                                <td><button class="bet-button" id="bet-bcc">1.75</button></td>
+                            </tr>
+                            <tr>
+                                <th>Empate</th>
+                                <td><button class="bet-button" id="bet-draw">3.00</button></td>
+                            </tr>
+                            <tr>
+                                <th>Fisio</th>
+                                <td><button class="bet-button" id="bet-fisio">2.50</button></td>
+                            </tr>
+                        </tbody> <!-- Fim corpo da tabela -->
+                    </table> <!-- Fim tabela odd_winner_result -->
+                    <table class="odd_number_goals"> <!-- Inicio tabela odd_number_goals -->
+                        <thead> <!-- Inicio titulo da tabela -->
+                            <tr> <!-- dados da tabela -->
+                                <th colspan="3">Total de Gols: Mais/Menos</th>
+                            </tr>
+                            <th></th>
+                            <th>Mais</th>
+                            <th>Menos</th>
+                        </thead> <!-- Fim dados da tabela -->
+                        <tbody> <!-- Inicio corpo da tabela -->
+                            <tr> <!-- Dados da tabela -->
+                                <td>0,5</td>
+                                <td><button>1.10 </button></td>
+                                <td><button>4.00</button></td>
+                            </tr>
+                            <tr>
+                                <td>1,5</td>
+                                <td><button>1.25</button></td>
+                                <td><button>3.65</button></td>
+                            </tr>
+                            <tr>
+                                <td>2,5</td>
+                                <td><button>1.45 </button></td>
+                                <td><button>2.90</button></td>
+                            </tr>
+                            <tr>
+                                <td>3,5</td>
+                                <td><button>1.60 </button></td>
+                                <td><button>2.55</button></td>
+                            </tr>
+                        </tbody> <!-- Fim corpo da tabela -->
+                    </table> <!-- Fim tabela odd_number_goals-->
+                </div> <!-- Fim classe container -->
+            </div> <!-- Fim classe general_odds -->
+            </tbody>
+        </div> <!-- Fim div mens_futsal-->
+
+        <div id="womens_volley"> <!-- Inicio div womens_volley-->
+            <table class="versus_table"> <!-- Inicio sessão versus_table-->
+                <thead> <!-- Inicio Titulo da tabela -->
+                    <h3>VOLEI FEMINIO</h3>
+                    <tr>
+                        <th class="team_shields"><img src="img/logo_exatas.png" alt="logo_exatas" id="logo_exatas"></th> <!-- Logo Exatas -->
+                        <th class="x_versus_table">X</th>
+                        <th class="team_shields"><img src="img/logo_humanas.png" alt="logo_humanas" id="logo_humanas"></th> <!-- Logo Humanas -->
+                    </tr>
+                </thead> <!-- Fim Titulo da tabela -->
+                <tbody> <!-- Inicio corpo da tabela-->
+                    <tr> <!-- Dados da tabela -->
+                        <td>Exatas</td>
+                        <td>16/05 - 19:00</td>
+                        <td>Humanas</td>
+                    </tr> <!-- Fim dados da tabela -->
+            </table> <!-- Fim tabela versus_table -->
+
+            <div class="general_odds"> <!-- Inicio odds gerais -->
+                <div class="container"> <!-- Inicio classe container -->
+                    <table class="odd_winner_result"> <!-- Inicio tabela odd_winner_result -->
+                        <thead> <!-- Inicio Titulo da tabela -->
+                            <tr>
+                                <th colspan="2">Vencedor da partida</th>
+                            </tr>
+                        </thead> <!-- Fim titulo da tabela -->
+                        <tbody> <!-- Inicio corpo da tabela -->
+                            <tr> <!-- Dados da tabela -->
+                                <th>Exatas</th>
+                                <td><button class="bet-button" id="bet-exatas">1.75</button></td>
+                            </tr>
+                            <tr>
+                                <th>Humanas</th>
+                                <td><button class="bet-button" id="bet-humanas">2.50</button></td>
+                            </tr>
+                        </tbody> <!-- Fim corpo da tabela -->
+                    </table> <!-- Fim tabela odd_winner_result -->
+                    <table class="odd_results_sets"> <!-- Inicio tabela odd_results_sets -->
+                        <thead> <!-- Inicio titulo da tabela -->
+                            <tr> <!-- dados da tabela -->
+                                <th colspan="3">Resultado em Sets</th>
+                            </tr>
+                            <th></th>
+                            <th>Mais</th>
+                            <th>Menos</th>
+                        </thead> <!-- Fim dados da tabela -->
+                        <tbody> <!-- Inicio corpo da tabela -->
+                            <tr> <!-- Dados da tabela -->
+                                <td>0,5</td>
+                                <td><button>1.10 </button></td>
+                                <td><button>4.00</button></td>
+                            </tr>
+                            <tr>
+                                <td>1,5</td>
+                                <td><button>1.25</button></td>
+                                <td><button>3.65</button></td>
+                            </tr>
+                            <tr>
+                                <td>2,5</td>
+                                <td><button>1.45 </button></td>
+                                <td><button>2.90</button></td>
+                            </tr>
+                            <tr>
+                                <td>3,5</td>
+                                <td><button>1.60 </button></td>
+                                <td><button>2.55</button></td>
+                            </tr>
+                        </tbody> <!-- Fim corpo da tabela -->
+                    </table> <!-- Fim tabela odd_number_goals-->
+                </div> <!-- Fim classe container -->
+            </div> <!-- Fim classe general_odds -->
+            </tbody>
+        </div> <!-- Fim div womens_volley-->
     </section>
 
     <footer>
         <p>&copy; 2024 JIUBets</p>
         <p>Feito por: Pedro Henrique de Almeida - Discente BCC Unifal-MG</p>
+        <nav>
+            <ul>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
     </footer>
     <script src="script.js"></script>
 </body>

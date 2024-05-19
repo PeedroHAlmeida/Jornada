@@ -4,12 +4,18 @@ body {
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
 
 nav ul {
@@ -32,17 +38,21 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Sections */
 section {
-    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h1{
+    font-family: "Jaro", sans-serif;
+    font-size: 5vh;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 h2 {
     padding-bottom: 5px;
-}
-
-.subtitulo{
-    border-bottom: 1px solid #ccc;
+    
 }
 
 h3 {
@@ -66,12 +76,15 @@ table th {
 /*  background-image: linear-gradient(24deg, black, #ff9900); */
 }
 
+.subtitulo{
+    border-bottom: 1px solid #ccc;
+}
+
 .versus_table, .general_odds{
     margin-bottom: 30px;
 }
 
 .odd_number_goals{
-    margin-top: 30px;
 }
 
 .odd_match_result{
@@ -79,19 +92,20 @@ table th {
 }
 
 .x_versus_table{
-    width: 15px;
+    width: 40px;
+}
+
+.container{
+    display: flex;
+    gap: 20px; /* Espaçamento entre as tabelas */
 }
 
 .team_shields{
-    width: 800px;
+    width: 300px;
 }
 
-/* Footer */
-footer {
+#home{
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
 }
 
 #logo_bcc{
@@ -99,7 +113,17 @@ footer {
     height: 200px;
 }
 
+#logo_exatas{
+    width: 180px;
+    height: 200px;
+}
+
 #logo_fisio{
+    width: 170px;
+    height: 170px;
+}
+
+#logo_humanas{
     width: 170px;
     height: 170px;
 }
@@ -138,4 +162,5 @@ footer {
     width: 170px;
     height: 170px;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
