@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /* background-color: #606060; */
 }
 
 header {
-    background-color: #333;
+    background-image: linear-gradient(24deg, black, #077ddd);
     color: white;
     text-align: center;
     padding: 10px;
@@ -65,7 +66,14 @@ table {
     border-collapse: collapse;
 }
 
-table th, table td {
+tbody td {
+    padding: 0; /* Remove o padding para que o botão ocupe toda a célula */
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th{
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
@@ -74,6 +82,21 @@ table th, table td {
 table th {
     background-color: #f2f2f2;
 /*  background-image: linear-gradient(24deg, black, #ff9900); */
+}
+
+button{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: white; /* Cor de fundo do botão */
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ccc;
 }
 
 .subtitulo{
@@ -87,8 +110,8 @@ table th {
 .odd_number_goals{
 }
 
-.odd_match_result{
-    margin-bottom: 15px;
+.odd_winner_result{
+    /* margin-bottom: 15px; */
 }
 
 .x_versus_table{
